@@ -6,6 +6,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; If it's not working for your screen resolution / mouse sensitivity you may need to change the RelativeMove number from 11000 to something else
 
+Msgbox, Press F9 to move items from left to right and Shift F9 to move items from right to left. You may need to edit RelativeMove value to match your system configuration. F10 to stop. F11 to quit.
+
 SendMouse_RelativeMove(x, y) {
     DllCall("mouse_event", "UInt", 0x01, "UInt", x, "UInt", y)
 }
